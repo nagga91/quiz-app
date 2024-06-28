@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Mohmed's Quiz</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <h2>Welcome to Mohmed's Quiz!</h2>
+            <p>Enter your name and password:</p>
+            <input type="text" id="user-name" placeholder="Name">
+            <input type="password" id="user-password" placeholder="Password">
+            <button id="start-quiz-btn">Start Quiz</button>
+        </div>
+    </div>
+<div class="card">
+    <div class="quiz-box card__content">
+        <h1 id="thequestion">Ready To Start ?</h1>
+        <label class="material-checkbox">
+            <input type="checkbox"> <br> <span id="answer1" class="checkmark"></span>
+        </label>
+        <label class="material-checkbox">
+            <input type="checkbox"> <br> <span id="answer2" class="checkmark"></span>
+        </label>
+        <label class="material-checkbox">
+            <input type="checkbox"> <br> <span id="answer3" class="checkmark"></span>
+        </label>
+        <label class="material-checkbox">
+            <input type="checkbox"> <span id="answer4" class="checkmark"></span>
+        </label>
+        <button id="next" type="submit">
+            Next
+        </button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

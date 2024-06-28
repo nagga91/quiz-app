@@ -1,0 +1,264 @@
+body {
+    font-family: 'Open Sans';
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .modal {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    overflow: auto;
+  }
+.quiz-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    border-radius: 20px;
+    border: 2px solid;
+    height: 700px;
+    width: 80%;
+    border-color: red;
+}
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+  }
+  
+  #page-content {
+    filter: blur(4px); 
+    transition: filter 0.3s ease;
+  }
+  
+  #page-content.blur {
+    filter: none;
+  }
+  
+  .card {
+    width: 30%;
+    height: 500px;
+    border-radius: 20px;
+    padding: 2px;
+    box-shadow: #0400ff 3px 3px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, #000, #272727);
+    color: #fff;
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 900;
+  } 
+
+  button {
+    appearance: button;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 19px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+   }
+   
+   button:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+   }
+   
+   button:main, button:focus {
+    user-select: auto;
+   }
+   
+   button:hover:not(:disabled) {
+    filter: brightness(1.1);
+   }
+   
+   button:disabled {
+    cursor: auto;
+   }
+   
+   button:active:after {
+    border-width: 0 0 0px;
+   }
+   
+   button:active {
+    padding-bottom: 10px;
+   }
+  /* .material-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #777777;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .material-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }*/
+  
+  .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    border: 2px solid #454B00;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #2F3300;
+    border-color: #454B00;
+  }
+  
+  .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .material-checkbox input[type="checkbox"]:focus ~ .checkmark {
+    box-shadow: 0 0 0 2px #dfec5065;
+  }
+  
+  .material-checkbox:hover input[type="checkbox"] ~ .checkmark {
+    border-color: #C3CF34;
+  }
+  
+  .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .material-checkbox input[type="checkbox"]:disabled ~ .checkmark:hover {
+    border-color: #4d4d4d;
+  }
+  
+  #next {
+    margin-top: 50px;
+  }
+
+  .material-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #777777;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+  .material-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    border: 2px solid #454B00;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #2F3300;
+    border-color: #454B00;
+  }
+  
+  .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .material-checkbox input[type="checkbox"]:focus ~ .checkmark {
+    box-shadow: 0 0 0 2px #dfec5065;
+  }
+  
+  .material-checkbox:hover input[type="checkbox"] ~ .checkmark {
+    border-color: #C3CF34;
+  }
+  
+  .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
+    opacity: 0.5; /* Adjust the opacity for disabled checkboxes */
+  }
+  
